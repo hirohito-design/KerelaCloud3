@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerala Town – Authentic Kerala Flavours in Pune</title>
+  <meta name="description" content="Kerala Town Cloud Kitchen – Homely Kerala meals, fresh specials, and cloud kitchen orders made simple. Order now in Pune, Pimpri-Chinchwad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🌴</span>
+        <div class="logo-text">
+          <span class="logo-name">Kerala Town</span>
+          <span class="logo-sub">Cloud Kitchen</span>
+        </div>
+      </div>
+      <nav class="nav-links" id="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#specials">Specials</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#location">Location</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:9421607419" class="btn-call" id="btn-call-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Order Now
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <!-- Background layers -->
+    <div class="hero-bg" id="hero-bg">
+      <div class="hero-img-layer active" id="layer-biryani" style="background-image:url('images/biryani.png')"></div>
+      <div class="hero-img-layer" id="layer-neychoor" style="background-image:url('images/neychoor.png')"></div>
+      <div class="hero-img-layer" id="layer-porotta" style="background-image:url('images/porotta.png')"></div>
+      <div class="hero-img-layer" id="layer-fishfry" style="background-image:url('images/fish_fry.png')"></div>
+      <div class="hero-img-layer" id="layer-chickenroast" style="background-image:url('images/chicken_roast.png')"></div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Now Open for Orders</span>
+      </div>
+      <h1 class="hero-title">Authentic Kerala<br /><span class="hero-accent">Flavours in Pune</span></h1>
+      <p class="hero-sub">Homely Kerala meals, fresh specials, and<br class="d-none-sm"/>cloud kitchen orders made simple.</p>
+
+      <!-- Dish info block -->
+      <div class="dish-info" id="dish-info">
+        <p class="dish-name" id="dish-name">Pothi Chicken Biryani</p>
+        <p class="dish-desc" id="dish-desc">Kerala-style biryani wrapped in banana leaf, rich and aromatic.</p>
+      </div>
+
+      <div class="hero-actions">
+        <a href="tel:9421607419" class="btn-primary" id="btn-order-hero">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Call to Order
+        </a>
+        <a href="#menu" class="btn-secondary" id="btn-view-menu">View Full Menu</a>
+      </div>
+    </div>
+
+    <!-- Menu selector buttons -->
+    <div class="menu-selector" id="menu-selector">
+      <p class="selector-label">Explore Our Specials</p>
+      <div class="selector-buttons">
+        <button class="sel-btn active" id="btn-biryani" data-dish="biryani" data-layer="layer-biryani" data-name="Pothi Chicken Biryani" data-desc="Kerala-style biryani wrapped in banana leaf, rich and aromatic.">
+          <span class="sel-icon">🍛</span>
+          <span>Pothi Biryani</span>
+        </button>
+        <button class="sel-btn" id="btn-neychoor" data-dish="neychoor" data-layer="layer-neychoor" data-name="Neychoor" data-desc="Fragrant ghee rice served with authentic Kerala sides.">
+          <span class="sel-icon">🍚</span>
+          <span>Neychoor</span>
+        </button>
+        <button class="sel-btn" id="btn-porotta" data-dish="porotta" data-layer="layer-porotta" data-name="Porotta" data-desc="Soft layered Kerala porotta, perfect with curry.">
+          <span class="sel-icon">🫓</span>
+          <span>Porotta</span>
+        </button>
+        <button class="sel-btn" id="btn-fishfry" data-dish="fishfry" data-layer="layer-fishfry" data-name="Fish Fry" data-desc="Spicy Kerala-style fish fry with bold flavours.">
+          <span class="sel-icon">🐟</span>
+          <span>Fish Fry</span>
+        </button>
+        <button class="sel-btn" id="btn-chickenroast" data-dish="chickenroast" data-layer="layer-chickenroast" data-name="Chicken Roast" data-desc="Slow-roasted Kerala chicken with rich masala.">
+          <span class="sel-icon">🍗</span>
+          <span>Chicken Roast</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- TODAY'S SPECIALS -->
+  <section class="specials" id="specials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fresh Today</span>
+        <h2 class="section-title">Today's Specials</h2>
+        <p class="section-sub">Made fresh every morning with authentic Kerala ingredients</p>
+      </div>
+      <div class="specials-grid">
+        <div class="special-card" id="special-biryani">
+          <div class="special-img" style="background-image:url('images/biryani.png')">
+            <div class="special-badge">Chef's Pick</div>
+          </div>
+          <div class="special-body">
+            <h3>Pothi Chicken Biryani</h3>
+            <p>Banana-leaf wrapped Kerala biryani with aromatic whole spices and tender chicken.</p>
+            <div class="special-footer">
+              <span class="price">₹280</span>
+              <a href="tel:9421607419" class="btn-order-sm">Order</a>
+            </div>
+          </div>
+        </div>
+        <div class="special-card" id="special-neychoor">
+          <div class="special-img" style="background-image:url('images/neychoor.png')">
+            <div class="special-badge">Popular</div>
+          </div>
+          <div class="special-body">
+            <h3>Neychoor Combo</h3>
+            <p>Ghee rice served with dal, papad, pickle, and Kerala-style side dishes.</p>
+            <div class="special-footer">
+              <span class="price">₹220</span>
+              <a href="tel:9421607419" class="btn-order-sm">Order</a>
+            </div>
+          </div>
+        </div>
+        <div class="special-card" id="special-fishfry">
+          <div class="special-img" style="background-image:url('images/fish_fry.png')">
+            <div class="special-badge">Spicy 🌶️</div>
+          </div>
+          <div class="special-body">
+            <h3>Kerala Fish Fry</h3>
+            <p>Bold red masala coated crispy fish fry, served with sliced onions and lemon.</p>
+            <div class="special-footer">
+              <span class="price">₹260</span>
+              <a href="tel:9421607419" class="btn-order-sm">Order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL MENU -->
+  <section class="full-menu" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Menu</span>
+        <h2 class="section-title">Full Menu</h2>
+        <p class="section-sub">Authentic Kerala flavours crafted fresh daily</p>
+      </div>
+      <div class="menu-tabs" id="menu-tabs">
+        <button class="tab-btn active" id="tab-rice" data-tab="rice">Rice &amp; Biryani</button>
+        <button class="tab-btn" id="tab-bread" data-tab="bread">Breads</button>
+        <button class="tab-btn" id="tab-nonveg" data-tab="nonveg">Non-Veg</button>
+        <button class="tab-btn" id="tab-veg" data-tab="veg">Veg Sides</button>
+      </div>
+      <div class="menu-panels">
+        <div class="menu-panel active" id="panel-rice">
+          <div class="menu-items-grid">
+            <div class="menu-item"><div class="mi-info"><h4>Pothi Chicken Biryani</h4><p>Kerala-style banana leaf biryani</p></div><span class="mi-price">₹280</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Neychoor (Ghee Rice)</h4><p>Fragrant ghee rice with Kerala sides</p></div><span class="mi-price">₹220</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Veg Biryani</h4><p>Kerala spiced vegetable biryani</p></div><span class="mi-price">₹200</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Mutton Biryani</h4><p>Slow-cooked mutton biryani</p></div><span class="mi-price">₹340</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Prawn Biryani</h4><p>Spiced prawn biryani, Kerala style</p></div><span class="mi-price">₹360</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Egg Rice</h4><p>Kerala egg fried rice</p></div><span class="mi-price">₹160</span></div>
+          </div>
+        </div>
+        <div class="menu-panel" id="panel-bread">
+          <div class="menu-items-grid">
+            <div class="menu-item"><div class="mi-info"><h4>Porotta</h4><p>Soft layered flatbread (2 pcs)</p></div><span class="mi-price">₹60</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Porotta + Curry</h4><p>With your choice of curry</p></div><span class="mi-price">₹160</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Appam</h4><p>Kerala lace-edged rice pancakes</p></div><span class="mi-price">₹80</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Appam + Stew</h4><p>With creamy Kerala veg stew</p></div><span class="mi-price">₹180</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Puttu</h4><p>Steamed rice cake with coconut</p></div><span class="mi-price">₹100</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Idiyappam</h4><p>String hoppers with coconut milk</p></div><span class="mi-price">₹120</span></div>
+          </div>
+        </div>
+        <div class="menu-panel" id="panel-nonveg">
+          <div class="menu-items-grid">
+            <div class="menu-item"><div class="mi-info"><h4>Chicken Roast</h4><p>Slow roasted with rich masala</p></div><span class="mi-price">₹280</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Fish Fry</h4><p>Spicy Kerala-style crispy fish</p></div><span class="mi-price">₹260</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Prawn Masala</h4><p>Coconut prawn curry</p></div><span class="mi-price">₹360</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Egg Masala</h4><p>Kerala-spiced egg curry</p></div><span class="mi-price">₹160</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Mutton Curry</h4><p>Slow-cooked Kerala mutton</p></div><span class="mi-price">₹340</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Chicken Curry</h4><p>Traditional Kerala chicken curry</p></div><span class="mi-price">₹240</span></div>
+          </div>
+        </div>
+        <div class="menu-panel" id="panel-veg">
+          <div class="menu-items-grid">
+            <div class="menu-item"><div class="mi-info"><h4>Avial</h4><p>Mixed veg in coconut &amp; yogurt</p></div><span class="mi-price">₹140</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Sambar</h4><p>Kerala-style lentil sambar</p></div><span class="mi-price">₹100</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Thoran</h4><p>Stir-fried veg with coconut</p></div><span class="mi-price">₹120</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Dal Tadka</h4><p>Tempered lentil curry</p></div><span class="mi-price">₹120</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Pachadi</h4><p>Yogurt-based Kerala side dish</p></div><span class="mi-price">₹100</span></div>
+            <div class="menu-item"><div class="mi-info"><h4>Papad &amp; Pickle</h4><p>Crispy papad with mango pickle</p></div><span class="mi-price">₹60</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What People Say</span>
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="rating-summary" id="rating-summary">
+          <div class="stars-big">★★★★★</div>
+          <div class="rating-info">
+            <span class="rating-number">4.8</span>
+            <span class="rating-count">from 70 reviews</span>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card" id="review-1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The Pothi Biryani is absolutely incredible. The banana leaf wrapping keeps all the flavours locked in. Tastes exactly like home-cooked Kerala food!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">SR</div>
+            <div><strong>Suresh R.</strong><span>Pimpri</span></div>
+          </div>
+        </div>
+        <div class="review-card" id="review-2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Best Kerala food in Pune by far. The porotta is soft and flaky, the chicken roast has amazing depth of flavour. Highly recommended!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">AM</div>
+            <div><strong>Anita M.</strong><span>Vikas Nagar</span></div>
+          </div>
+        </div>
+        <div class="review-card" id="review-3">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">"Finally found authentic Kerala fish fry in Pune! The masala coating is bold and crispy. Great value for money and quick delivery too."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">RK</div>
+            <div><strong>Rahul K.</strong><span>Saudagar Nagari</span></div>
+          </div>
+        </div>
+        <div class="review-card" id="review-4">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Neychoor combo is a must-try. Rich ghee rice with all the sides feels like a full Kerala meal. Order every week without fail!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">PJ</div>
+            <div><strong>Priya J.</strong><span>Chinchwad</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Promise</span>
+        <h2 class="section-title">Why Choose Kerala Town?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" id="why-1">
+          <div class="why-icon">🌿</div>
+          <h3>100% Authentic</h3>
+          <p>Recipes passed down through generations. Every dish is crafted with original Kerala spices and ingredients.</p>
+        </div>
+        <div class="why-card" id="why-2">
+          <div class="why-icon">🍃</div>
+          <h3>Fresh Daily</h3>
+          <p>Cooked fresh every morning. No reheating, no shortcuts – just honest homestyle Kerala cooking.</p>
+        </div>
+        <div class="why-card" id="why-3">
+          <div class="why-icon">🚀</div>
+          <h3>Fast Delivery</h3>
+          <p>Cloud kitchen setup means your food reaches you hot and fresh with contactless delivery options.</p>
+        </div>
+        <div class="why-card" id="why-4">
+          <div class="why-icon">💰</div>
+          <h3>Great Value</h3>
+          <p>Premium Kerala food at honest prices. Full meals starting from ₹200 – because good food shouldn't cost a fortune.</p>
+        </div>
+        <div class="why-card" id="why-5">
+          <div class="why-icon">⭐</div>
+          <h3>4.8 Star Rated</h3>
+          <p>Loved by 70+ happy customers across Pune. Our reviews speak for the quality we deliver every time.</p>
+        </div>
+        <div class="why-card" id="why-6">
+          <div class="why-icon">🤝</div>
+          <h3>Flexible Service</h3>
+          <p>Dine-in, drive-through, or no-contact delivery – we adapt to your convenience, every order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & CTA -->
+  <section class="location-cta" id="location">
+    <div class="container">
+      <div class="location-inner">
+        <div class="location-info" id="location-info">
+          <span class="section-tag">Find Us</span>
+          <h2>Come Visit or<br /><span class="accent">Order Online</span></h2>
+          <div class="location-details">
+            <div class="loc-item" id="loc-address">
+              <span class="loc-icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <p>Saudagar Nagari, Vikas Nagar,<br />Pune, Pimpri-Chinchwad</p>
+              </div>
+            </div>
+            <div class="loc-item" id="loc-hours">
+              <span class="loc-icon">🕐</span>
+              <div>
+                <strong>Hours</strong>
+                <p>Mon – Sun: 11:00 AM – 10:00 PM</p>
+              </div>
+            </div>
+            <div class="loc-item" id="loc-services">
+              <span class="loc-icon">✅</span>
+              <div>
+                <strong>Services</strong>
+                <p>Dine-in · Drive-through · No-contact Delivery</p>
+              </div>
+            </div>
+            <div class="loc-item" id="loc-price">
+              <span class="loc-icon">💵</span>
+              <div>
+                <strong>Price Range</strong>
+                <p>₹200 – ₹400 per person</p>
+              </div>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <a href="tel:9421607419" class="btn-primary" id="btn-call-location">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              Call: 94216 07419
+            </a>
+            <a href="https://maps.google.com/?q=Saudagar+Nagari+Vikas+Nagar+Pune" target="_blank" class="btn-secondary" id="btn-map">Get Directions</a>
+          </div>
+        </div>
+        <div class="map-placeholder" id="map-placeholder">
+          <div class="map-inner">
+            <div class="map-pin">📍</div>
+            <p class="map-label">Kerala Town</p>
+            <p class="map-addr">Saudagar Nagari, Vikas Nagar, Pune</p>
+            <a href="https://maps.google.com/?q=Saudagar+Nagari+Vikas+Nagar+Pune" target="_blank" class="map-link" id="map-link">Open in Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-icon">🌴</span>
+          <span class="footer-name">Kerala Town</span>
+          <p>Authentic Kerala flavours, delivered fresh to your door in Pune.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#specials">Today's Specials</a>
+          <a href="#menu">Full Menu</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#location">Location</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>📞 <a href="tel:9421607419">94216 07419</a></p>
+          <p>📍 Saudagar Nagari, Vikas Nagar,<br />Pune, Pimpri-Chinchwad</p>
+          <p>⭐ 4.8 / 5 from 70 reviews</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Kerala Town Cloud Kitchen. Crafted with ❤️ in Pune.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="tel:9421607419" class="sticky-btn" id="sticky-call">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call to Order
+    </a>
+    <a href="#menu" class="sticky-btn sticky-btn-outline" id="sticky-menu">View Menu</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
